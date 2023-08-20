@@ -1,4 +1,11 @@
+function playSound(audioFile) {
+  var audio = new Audio(audioFile);
+  audio.play();
+}
+
 function calculate(hydroxideType) {
+	playSound("click-sound.wav")
+	
 	const output = document.querySelector(".output")
 	const molecularWeightStr = document.querySelector(".molecular-weight-input").value
 	
@@ -8,8 +15,8 @@ function calculate(hydroxideType) {
 	if (!molecularWeightStr) {
 		output.innerHTML = "Insert molecular weight first"
 		return
-	} else if (!molecularWeight){
-		output.innerHTML = "Only integers allowed as input"
+	} else if (!molecularWeight) {
+		output.innerHTML = "Only integers above 0 are allowed as input"
 		return
 	}
 	
@@ -23,7 +30,7 @@ function calculate(hydroxideType) {
 		} else if (hydroxideType === "Alkene") {
 			H = C*2
 		} else if (hydroxideType === "Alkyne") {
-			H = C*2-1
+			H = C*2-2
 		}
 		
 		if (C*12+H === molecularWeight) {
@@ -38,7 +45,7 @@ function calculate(hydroxideType) {
 	if (outputText) {
 		output.innerHTML = outputText
 	} else {
-		output.innerHTML = `There is no ${hydroxideType} with ${molecularWeight} molecular weight`
+		output.innerHTML = `No ${hydroxideType} with ${molecularWeight} molecular weight`
 	}
 		
 	

@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(0,0,0);
+    background-color: black;
 }
 
 .output{
@@ -10,10 +10,9 @@ body {
 	width: 90%;
 	margin: 0% 5%;
 	margin-top: 30px;
-  font-weight: bolder;
+  font-weight: bold;
 	background-color: rgb(48,48,48);
-	color: rgb(255,255,255);
-	user-select: none;
+	color: white;
 	text-align: center;
 }
 
@@ -24,18 +23,22 @@ body {
 	padding: 25px 0px;
 	width: 90%;
 	margin: 10% 5%;
-	color: rgb(255,255,255);
-	background-color: rgb(0,0,0);
-	border-color: rgb(255,255,255);
+	color: white;
+	background-color: black;
+	border-color: white;
 	font-weight: bold;
 	text-align: center;
+	border-color: rgb(48,48,48);
+	outline-color: white;
+	cursor: none;
 }
 
 .Alkane,
 .Alkene,
 .Alkyne {
+	border-color: white;
 	font: Arial;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	color: rgb(0,0,0);
 	font-size: 30px;
 	padding: 35px 0px;
@@ -43,15 +46,21 @@ body {
 	margin: 0% 5%;
 	margin-top: 1px;
   font-weight: bolder;
-
+  user-select: none;
 }
 
 .Alkane{
-		border-start-start-radius: 10px;
-		border-start-end-radius: 10px;
+	border-start-start-radius: 10px;
+	border-start-end-radius: 10px;
 }
 
 .Alkyne{
 	border-end-start-radius: 10px;
 	border-end-end-radius: 10px;
+}
+
+button:active,
+button:hover{
+  background-color: black;
+  color: white;
 }
