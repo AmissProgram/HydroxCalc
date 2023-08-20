@@ -1,4 +1,4 @@
-function playSound(audioFile) {
+async function playSound(audioFile) {
   var audio = new Audio(audioFile);
   audio.play();
 }
@@ -39,7 +39,6 @@ function calculate(hydroxideType) {
 		}
 	}
 	
-	console.log(outputText)
 
 	//Output modifier
 	if (outputText) {
